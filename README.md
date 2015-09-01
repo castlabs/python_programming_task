@@ -18,3 +18,7 @@ specified, but with different value.
 `docker-compose.yml` (Hint: use python:3.4 image).
 
 5. Proxy should be configureable via environmental variables.
+
+## Delivery
+
+Result should be delivered using GitHub public repository.
