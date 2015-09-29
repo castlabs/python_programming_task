@@ -15,7 +15,7 @@ specified, but with different value.
 3. Expose proxy statistics at /stats endpoint (total bytes transferred, uptime).
 
 4. Proxy should be delivered with appropriate `Dockerfile` and
-`docker-compose.yml` (Hint: use python:3.4 image).
+`docker-compose.yml` (Hint: use python:3.5 image).
 
 5. Proxy should be configureable via environmental variables.
 
