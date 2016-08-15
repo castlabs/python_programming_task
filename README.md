@@ -1,24 +1,27 @@
 # AsyncProxy - Python Programming Task
 
-Your task is to build an asynchronous HTTP proxy complying to the requirements
+Your task is to build an asynchronous HTTP proxy (see definition in
+[RFC2616](https://www.ietf.org/rfc/rfc2616.txt)) complying to the requirements
 specified below.
 
 ## Requirements
 
-1. Range requests support as defined in
+1. Range requests must be supported as defined in
 [RFC2616](https://www.ietf.org/rfc/rfc2616.txt), but also via `range` query
 parameter.
 
-2. Return 416 error in case where both header and query parameter are
-specified, but with different value.
+2. HTTP 416 error must be returned in case where both header and query parameter are
+specified, but with a different value.
 
-3. Expose proxy statistics at /stats endpoint (total bytes transferred, uptime).
+3. Program must start with a single command `docker-compose up`.
 
-4. Proxy should be delivered with appropriate `Dockerfile` and
-`docker-compose.yml` (Hint: use python:3.5 image).
+4. Proxy must be reachable at `http://<docker-host>:8080` .
 
-5. Proxy should be configureable via environmental variables.
+5. Usage statistics must be available at `http://<docker-host>:8080/stats`
 
-## Delivery
+  * total bytes transferred
+  * uptime
 
-Result should be delivered using GitHub public repository.
+6. Code must run with Python 3.5+.
+
+7. Code must be delivered as a link to public GitHub repository.
