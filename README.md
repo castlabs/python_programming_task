@@ -1,25 +1,32 @@
-# AsyncProxy - Python Programming Task
+# Python Programming Task
 
-Your task is to build an asynchronous HTTP proxy (see definition in
-[RFC2616](https://www.ietf.org/rfc/rfc2616.txt)) complying to the requirements
-specified below.
+Your task is to build an HTTP proxy (see definition in [RFC2616](https://www.ietf.org/rfc/rfc2616.txt)) that takes a `POST` request and appends a `JSON Web Token` with the following claims:
+- `iat` - Timestamp of the request as specified by the specification
+- `jti`- A cryptographic nonce that should be unique
+- `payload` - A json payload of the structure: `{"user": "username", "date": "todays date"}`
 
-## Requirements
+The JWT should be signed with the following hex string secret using the `HS512` alogrithm as in the JWT spec:
 
-1. Range requests must be supported as defined in [RFC2616](https://www.ietf.org/rfc/rfc2616.txt), but also via `range` query parameter.
+```a9ddbcaba8c0ac1a0a812dc0c2f08514b23f2db0a68343cb8199ebb38a6d91e4ebfb378e22ad39c2d01 d0b4ec9c34aa91056862ddace3fbbd6852ee60c36acbf```
 
-2. HTTP 416 error must be returned in case where both header and query parameter are specified, but with a different value.
+Append the JWT as the `x-my-jwt` header to the upstream post request.
 
-3. Program must start with a single command `docker-compose up`.
+The upstream post endpoint can be any dummy endpoint. For example you can write your own or use something like https://reqres.in or https://postman-echo.com
 
-4. Proxy must be reachable at `http://<docker-host>:${HTTP_PROXY_PORT}` .
+## Requirements:
+- Use Python3.6+
+- Please use whatever libraries are necessary
+- Use Docker and provide a docker-compose.yml file in at least `version '2'`
+- Provide a `Makefile` with following targets:
+  - `build` to build the application
+  - `run` to execute what's needed to run the server. You can use `HTTP_PORT` variable to specify on which port the proxy binds
+- Deliver the project via a public GitHub repository
 
-5. Usage statistics must be available at `http://<docker-host>:${HTTP_PROXY_PORT}/stats`
-  * total bytes transferred
-  * uptime
-
-6. Code must run with Python 3.8.
-
-7. Code must be covered with tests
-
-8. Code must be delivered as a link to public GitHub repository.
+## Bonus Points:
+- Provide `/status` page with
+  - time from start
+  - number of requests processed
+- Use asyncronous programming
+- Provide tests covering the functionality
+- Extend `Makefile` with a `test` target executing the tests covering the functionality
+ 
