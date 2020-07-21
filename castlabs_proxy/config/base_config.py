@@ -1,3 +1,6 @@
+# For demo purposes
+# On a real application config files will not be committed
+
 class BaseConfig:
     DEBUG = False
     TESTING = False
