@@ -7,6 +7,12 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+Flask = "^1.1.2"
+flask-shell-ipython = "^0.4.1"
+ipython = "^7.16.1"
+pyjwt = "^1.7.1"
+requests = "^2.24.0"
+pytest = "^5.4.3"
 
 [tool.poetry.dev-dependencies]
 
