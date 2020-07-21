@@ -6,3 +6,6 @@ build:
 
 run:
 	env FLASK_APP=run.py flask run
+
+test:
+	pytest castlabs_proxy/tests
