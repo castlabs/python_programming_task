@@ -1,15 +1,18 @@
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response, current_app, render_template
 from datetime import datetime
 from urllib.parse import urljoin
 from requests import post
 from castlabs_proxy.forms import ProxyForm
+from babel.dates import format_datetime
 
 import secrets
 import jwt
+import humanize
 
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
+    app.config['RUNNING_SINCE'] = datetime.now()
 
     # TODO: Review
     app.config.from_mapping(SECRET_KEY='tralara')
@@ -22,6 +25,19 @@ def create_app(test_config=None):
     # As this is a very, very basic service, all routes are defined here.
     #
     # On more complex applications, an App folder exists with Blueprints.
+
+    @app.route('/status')
+    def status():
+        running_since = current_app.config['RUNNING_SINCE']
+        elapsed = running_since - datetime.now()
+        elapsed_humanized = humanize.naturaldelta(elapsed)
+        startup_date = format_datetime(running_since,
+                                       format='long',
+                                       locale='en_US')
+
+        return render_template('status.html',
+                               elapsed=elapsed_humanized,
+                               startup_date=startup_date)
 
     @app.route('/', methods=('POST',), defaults={'path': ''})
     @app.route('/<path:path>')

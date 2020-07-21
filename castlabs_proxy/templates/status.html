@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Status page</h1>
+{% endblock %}
+
+{% block content %}
+    This app has been running for {{ elapsed }}. The last start of the application was on {{ startup_date }}.
+{% endblock %}
