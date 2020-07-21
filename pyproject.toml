@@ -13,6 +13,8 @@ ipython = "^7.16.1"
 pyjwt = "^1.7.1"
 requests = "^2.24.0"
 pytest = "^5.4.3"
+Flask-WTF = "^0.14.3"
+wtforms = "^2.3.1"
 
 [tool.poetry.dev-dependencies]
 

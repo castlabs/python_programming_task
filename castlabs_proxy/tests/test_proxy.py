@@ -8,7 +8,7 @@ import jwt
 class TestProxy:
     def test_post_must_contain_a_json_payload(self, client):
         response = client.post('/')
-        assert response.status_code == 407
+        assert response.status_code == 400
         assert 'errors' in response.json.keys()
         assert 'Missing payload' in response.json['errors']
 
@@ -21,7 +21,7 @@ class TestProxy:
         }
         response = client.post('/', json=data)
 
-        assert response.status_code == 407
+        assert response.status_code == 400
         assert 'errors' in response.json.keys()
         assert 'Missing user' in response.json['errors']
 
@@ -31,7 +31,7 @@ class TestProxy:
         }
         response = client.post('/', json=data)
 
-        assert response.status_code == 407
+        assert response.status_code == 400
         assert 'errors' in response.json.keys()
         assert 'Missing date' in response.json['errors']
 
@@ -49,7 +49,7 @@ class TestProxy:
 
         assert response.status_code == 400
         assert 'errors' in response.json.keys()
-        assert 'Invalid date format. It must be YYYYMMDDMMHHSS' in response.json['errors']
+        assert 'Not a valid datetime value' in response.json['errors']
 
     def test_response_contains_a_jwt(self, client):
         data = {

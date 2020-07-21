@@ -2,6 +2,7 @@ from flask import Flask, request, make_response
 from datetime import datetime
 from urllib.parse import urljoin
 from requests import post
+from castlabs_proxy.forms import ProxyForm
 
 import secrets
 import jwt
@@ -29,48 +30,34 @@ def create_app(test_config=None):
         jwt_algorithm = app.config['JWT_ALGORITHM']
         backend_url = app.config['BACKEND_URL']
 
-        if not request.is_json:
-            data = {
-                'errors': [
-                    'Missing payload'
-                ]
-            }
-            response = make_response(data, 407)
-            return response
+        # CSRF disabled for demo purposes
+        form = ProxyForm(csrf_enabled=False)
 
-        data = request.json
-        errors = []
-        if 'user' not in data.keys():
-            errors.append('Missing user')
+        if not form.validate_on_submit():
+            errors = []
+            for error in form.errors.values():
+                errors.append(error[0])
 
-        if 'date' not in data.keys():
-            errors.append('Missing date')
+            if not request.is_json:
+                errors.append('Missing payload')
 
-        if errors:
             data = {
                 'errors': errors
             }
-            response = make_response(data, 407)
-            return response
-
-        try:
-            datetime.strptime(data['date'], '%Y%m%d%H%M%S')
-        except (TypeError, ValueError):
-            data = {
-                'errors': ['Invalid date format. It must be YYYYMMDDMMHHSS']
-            }
             return make_response(data, 400)
 
+        user = form.user.data
+        date = form.date.data
+
         current = datetime.now()
-        iso_date = current.isoformat()
         nonce = secrets.token_hex()
 
         data = {
             'iat': int(current.timestamp()),
             'jti': nonce,
             'payload': {
-                'username': data['user'],
-                'date': iso_date,
+                'username': user,
+                'date': date.isoformat(),
             }
         }
 
