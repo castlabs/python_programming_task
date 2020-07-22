@@ -1,6 +1,7 @@
+from castlabs_proxy import create_app
+
 import pytest
 
-from castlabs_proxy import create_app
 
 @pytest.fixture()
 def client():

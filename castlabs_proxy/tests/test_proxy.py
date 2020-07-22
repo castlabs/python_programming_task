@@ -1,7 +1,5 @@
-from castlabs_proxy.tests.fixtures.client import client
 from datetime import datetime
 
-import pytest
 import jwt
 
 
