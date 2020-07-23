@@ -30,3 +30,15 @@ The upstream post endpoint can be any dummy endpoint. For example you can write 
 - Provide tests covering the functionality
 - Extend `Makefile` with a `test` target executing the tests covering the functionality
  
+ 
+ ## How to run it
+ You can use docker-compose, docker or run the flask app itself. I recommend you to use docker-compose, which is as simple as:
+ 
+ ```bash
+docker-compose up --build 
+```
+
+(You may need sudo privileges to run it)
+
+Keep in mind that the castlabs-variables.env will not be commited on a real project, but here is for demo
+purposes.
