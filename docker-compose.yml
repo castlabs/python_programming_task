@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.0'
 services:
   web:
     build: .
@@ -8,3 +8,5 @@ services:
     - .:/flask-api
     env_file:
       - castlabs-variables.env
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/status || exit 1"]
