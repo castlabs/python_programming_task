@@ -1,4 +1,4 @@
-version: '3.0'
+version: '3.8'
 services:
   web:
     build: .
@@ -6,7 +6,14 @@ services:
     - "5000:5000"
     volumes:
     - .:/flask-api
-    env_file:
-      - castlabs-variables.env
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5000/status || exit 1"]
+    restart: on-failure
+    secrets:
+      - jwt_token
+      - flask_secret
+secrets:
+  jwt_token:
+    file: ./secrets/jwt_token.txt
+  flask_secret:
+    file: ./secrets/flask_secret.txt

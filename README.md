@@ -40,5 +40,5 @@ docker-compose up --build
 
 (You may need sudo privileges to run it)
 
-Keep in mind that the castlabs-variables.env will not be commited on a real project, but here is for demo
-purposes.
+Keep in mind that the contents of the secrets folder will not be commited on a 
+real project, but here is for demo purposes.
