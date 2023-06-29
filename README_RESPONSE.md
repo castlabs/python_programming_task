@@ -20,11 +20,11 @@ Glossary: <br>
   upstream - location where request should be send to by the app, ip or fqdn 
   
 Algoritm: <br>
-
-
-
-
-  1. User make 
+  1. User make http request to the app
+  2. App receives http request made by user
+  3. App adds data to http request payload
+  4. App logs info about the request [Optional]
+  5. App sends http request upstream
 
 
 # [Important info from RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
