@@ -34,8 +34,8 @@ Algoritm: <br>
   2.3 App makes http request to the upstream <br>
   2.4 Upstream receives http request <br>
   2.5 Upstream sends http response to the app <br>
+  2.6 App receives http response <br>
 3. App proxy http response <br>
-  3.1 App receives http response <br>
   3.2 App sends http response to the user <br>
   3.3 User receives http response <br>
     
