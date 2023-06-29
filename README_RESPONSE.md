@@ -1,12 +1,20 @@
 # Python Programming Task
 
-My first solution goals are robustness and development time.
+## Intro
 
-[Django](https://www.djangoproject.com/)+[Gunicorn](https://gunicorn.org) is my http server.
-[Requests](https://pypi.org/project/requests/) is my http client.
+My first solution goals are: robustness and development time.
+To achive that I: want to write as little code as it is possible. All tasks besides buissness logic will be provided by external packages.
+
+## Requirements
+
+To create non-transparent proxy I need a server and a client.
+
+[Django](https://www.djangoproject.com/)+[Gunicorn](https://gunicorn.org) is my server.
+[Requests](https://pypi.org/project/requests/) is my client.
 
 
-# [Important info from](https://www.ietf.org/rfc/rfc2616.txt)
+
+# [Important info from RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
 
 ```
   server
