@@ -13,7 +13,7 @@ To create non-transparent proxy I need a server and a client.
 [Django](https://www.djangoproject.com/)+[Gunicorn](https://gunicorn.org) is my server of choice.
 [Requests](https://pypi.org/project/requests/) is my client of choice.
 
-Custom upstream is my choice mainly to make e2e tests easier and quicker, endpoint logic:
+Custom upstream is my choice mainly to make e2e tests easier and quicker, upstream app logic:
    1. receive post request
    2. respond with the same payload as in post request
 
