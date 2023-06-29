@@ -38,7 +38,7 @@ Algoritm: <br>
   3.2 App sends http response to the user <br>
   3.3 User receives http response <br>
 
-I'll go for all bonus points except `Use asyncronous programming` cause I would like to propose second solution especially for it ;)
+I'll go for all bonus points except `Use asyncronous programming` cause I would like to propose a second solution especially for it ;)
 
 # Important info from [RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
 
