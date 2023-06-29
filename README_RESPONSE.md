@@ -6,7 +6,7 @@ My first solution goals are: robustness and development time.
 
 To achive that I: want to write as little code as it is possible. All tasks besides buissness logic will be provided by external packages.
 
-## Requirements
+## Solution
 
 To create non-transparent proxy I need a server and a client.
 
@@ -16,7 +16,6 @@ To create non-transparent proxy I need a server and a client.
 Custom upstream is my choice mainly to make e2e tests easier and quicker, endpoint logic:
    1. receive post request
    2. respond with the same payload as in post request
-
 
 ### Alghoritm
 Glossary: <br>
@@ -30,18 +29,16 @@ Algoritm: <br>
   1.2 App receives http request <br>
  2. App proxy http request  
   2.1 App adds data to http request payload <br>
-     ...
   2.2 App logs info about the request [Optional] <br>
   2.3 App makes http request to the upstream <br>
   2.4 Upstream receives http request <br>
   2.5 Upstream sends http response to the app <br>
   2.6 App receives http response <br>
-3. App proxy http response <br>
+ 3. App proxy http response <br>
   3.2 App sends http response to the user <br>
   3.3 User receives http response <br>
-    
-  
 
+I'll go for all bonus points except `Use asyncronous programming` cause I would like to propose second solution especially for it ;)
 
 # Important info from [RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
 
