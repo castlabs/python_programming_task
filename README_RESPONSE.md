@@ -15,11 +15,11 @@ To achive that I: want to write as little code as it is possible. All tasks besi
 
 To create non-transparent proxy I need a server and a client.
 
-[Django](https://www.djangoproject.com/)+[Gunicorn](https://gunicorn.org) is my server of choice.
-[Requests](https://pypi.org/project/requests/) is my client of choice.
+[aiohttp.Server](https://docs.aiohttp.org/en/stable/web.html) is my server of choice (standalone configuration).
+[aiohttp.Client](https://docs.aiohttp.org/en/stable/client.html) is my client of choice.
 
 
-My proxy needs upstream service to talk to.
+Proxy needs upstream service to talk to.
 
 Custom upstream is my choice mainly to make e2e tests easier and quicker, upstream logic:
    1. receive post request
@@ -30,7 +30,7 @@ Custom upstream is my choice mainly to make e2e tests easier and quicker, upstre
   1.1 User makes http request to the app <br>
   1.2 App receives http request <br>
  2. App proxy http request  
-  2.1 App adds data to http request payload <br>
+  2.1 App adds data (JWT) to http request payload <br>
   2.2 App logs info about the request [Optional] <br>
   2.3 App makes http request to the upstream <br>
   2.4 Upstream receives http request <br>
