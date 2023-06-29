@@ -21,7 +21,7 @@ Custom upstream is my choice mainly to make e2e tests easier and quicker, endpoi
 Glossary: <br>
   - app - proxy about which talk is about in task description
   - user - third party actor, can be human can be machine
-  - upstream - location where request should be send to by the app, combination of ip or fqdn and port
+  - upstream - location where request should be send to by the app, combination of: ip or fqd, port
   
 Algoritm: <br>
  1. User makes http request <br>
