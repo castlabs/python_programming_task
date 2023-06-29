@@ -15,16 +15,20 @@ To create non-transparent proxy I need a server and a client.
 
 ### Alghoritm
 Glossary: <br>
-  app - proxy about which a talk is about in task description
-  user - third party actor, can be human can be machine
-  upstream - location where request should be send to by the app, ip or fqdn 
+  - app - proxy about which a talk is about in task description
+  - user - third party actor, can be human can be machine
+  - upstream - location where request should be send to by the app, ip or fqdn 
   
 Algoritm: <br>
   1. User make http request to the app
-  2. App receives http request made by user
-  3. App adds data to http request payload
-  4. App logs info about the request [Optional]
-  5. App sends http request upstream
+  2. App receives http request
+  4. App adds data to http request payload
+  5. App logs info about the request [Optional]
+  6. App sends http request upstream
+  7. Upstream receives http request made by the user
+  8. Upstream sends http response to the app
+  9. App receives http response
+  10. App sends http response to the user
 
 
 # [Important info from RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
