@@ -22,13 +22,15 @@ Glossary: <br>
 Algoritm: <br>
   1. User make http request to the app
   2. App receives http request
-  4. App adds data to http request payload
-  5. App logs info about the request [Optional]
-  6. App sends http request upstream
-  7. Upstream receives http request made by the user
-  8. Upstream sends http response to the app
-  9. App receives http response
+  3. App proxy http request 
+     3.1 App adds data to http request payload
+     3.2 App logs info about the request [Optional]
+     3.3 App make http request to the upstream
+     3.4 Upstream receives http request 
+  4. Upstream sends http response to the app
+  5. App receives http response
   10. App sends http response to the user
+  11. User receives http response
 
 
 # [Important info from RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
