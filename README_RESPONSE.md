@@ -3,6 +3,7 @@
 ## Intro
 
 My first solution goals are: robustness and development time.
+
 To achive that I: want to write as little code as it is possible. All tasks besides buissness logic will be provided by external packages.
 
 ## Requirements
