@@ -40,6 +40,10 @@ Algoritm: <br>
 
 I'll go for all bonus points except `Use asyncronous programming` cause I would like to propose a second solution especially for it ;)
 
+###TO-DO
+1. write 2.1 in details
+2. write 2.2 in details
+
 # Important info from [RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
 
 ```
