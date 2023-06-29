@@ -30,6 +30,7 @@ Algoritm: <br>
   1.2 App receives http request <br>
  2. App proxy http request  
   2.1 App adds data to http request payload <br>
+     ...
   2.2 App logs info about the request [Optional] <br>
   2.3 App makes http request to the upstream <br>
   2.4 Upstream receives http request <br>
@@ -39,7 +40,7 @@ Algoritm: <br>
   3.2 App sends http response to the user <br>
   3.3 User receives http response <br>
     
- 
+  
 
 
 # Important info from [RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
