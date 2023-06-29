@@ -20,9 +20,9 @@ Custom upstream is my choice mainly to make e2e tests easier, endpoint logic:
 
 ### Alghoritm
 Glossary: <br>
-  - app - proxy about which a talk is about in task description
+  - app - proxy about which talk is about in task description
   - user - third party actor, can be human can be machine
-  - upstream - location where request should be send to by the app, ip or fqdn 
+  - upstream - location where request should be send to by the app, combination of ip or fqdn and port
   
 Algoritm: <br>
  1. User makes http request <br>
