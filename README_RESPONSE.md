@@ -2,7 +2,8 @@
 
 My first solution goals are robustness and development time.
 
-Django is my web server of choice on shich proxy will be built on.\
+[Django](https://www.djangoproject.com/)+[Gunicorn](https://gunicorn.org) is my http server.
+[Requests](https://pypi.org/project/requests/) is my http client.
 
 
 # [Important info from](https://www.ietf.org/rfc/rfc2616.txt)
