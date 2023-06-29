@@ -20,17 +20,33 @@ Glossary: <br>
   - upstream - location where request should be send to by the app, ip or fqdn 
   
 Algoritm: <br>
-  1. User make http request to the app
-  2. App receives http request
-  3. App proxy http request 
-     3.1 App adds data to http request payload
-     3.2 App logs info about the request [Optional]
-     3.3 App make http request to the upstream
-     3.4 Upstream receives http request 
-  4. Upstream sends http response to the app
-  5. App receives http response
-  10. App sends http response to the user
-  11. User receives http response
+ 1. User makes http request <br>
+  1.1 User makes http request to the app <br>
+  1.2 App receives http request <br>
+ 2. App proxy http request  
+  2.1 App adds data to http request payload <br>
+  2.2 App logs info about the request [Optional] <br>
+  2.3 App makes http request to the upstream <br>
+  2.4 Upstream receives http request
+  2.5 Upstream sends http response to the app
+3. App proxy http response <br>
+  3.1 App receives http response <br>
+  3.2 App sends http response to the user <br>
+  3.3 User receives http response <br>
+    
+ 6. List item
+
+ 1. User make http request to the app  
+ 2. App receives http request
+ 3. App proxy http request  
+  3.1 App adds data to http request payload
+  3.2 App logs info about the request [Optional]
+  3.3 App make http request to the upstream
+  3.4 Upstream receives http request
+ 5. Upstream sends http response to the app
+ 6. App receives http response
+ 10. App sends http response to the user
+ 11. User receives http response
 
 
 # [Important info from RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
