@@ -9,9 +9,22 @@ To achive that I: want to write as little code as it is possible. All tasks besi
 
 To create non-transparent proxy I need a server and a client.
 
-[Django](https://www.djangoproject.com/)+[Gunicorn](https://gunicorn.org) is my server.
-[Requests](https://pypi.org/project/requests/) is my client.
+[Django](https://www.djangoproject.com/)+[Gunicorn](https://gunicorn.org) is my server of choice.
+[Requests](https://pypi.org/project/requests/) is my client of choice.
 
+
+### Alghoritm
+Glossary: <br>
+  app - proxy about which a talk is about in task description
+  user - third party actor, can be human can be machine
+  upstream - location where request should be send to by the app, ip or fqdn 
+  
+Algoritm: <br>
+
+
+
+
+  1. User make 
 
 
 # [Important info from RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
