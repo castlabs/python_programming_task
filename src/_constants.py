@@ -1,0 +1,6 @@
+UPSTREAM_IP = "0.0.0.0"
+UPSTREAM_PORT = "12"
+UPSTREAM_SCHEME = "http"
+
+NESTED_URL_NAME = "nested_url"
+NESTED_URL_REGEX = r".*"
