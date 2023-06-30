@@ -1,5 +1,4 @@
-# TO-DO
-#  add cli interface
+#!/usr/bin/env python3
 
 from src.app import run_app
 
