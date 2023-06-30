@@ -4,20 +4,6 @@ services:
   app:
     build: .
     ports:
-      - "8000:8080"
-    networks:
-      - internal    
-      - external
+      - "8080:8080"
   upstream:
     build: ./upstream/
-    ports:
-      - "8000:8080"
-    networks:
-      - internal    
-
-networks:
-  internal:
-    external: false
-  external:
-    external: true
-   
