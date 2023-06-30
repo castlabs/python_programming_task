@@ -1,5 +1,5 @@
 venv_name := .venv
-sources := src test
+sources := src tests
 
 help:
 	@echo "lint - check style with ruff and mypy"
@@ -21,7 +21,7 @@ format:
 	python -m black $(sources)
 	python -m isort $(sources)
 
-tests:
+test:
 	python -m pytest -vv
 
 venv:
