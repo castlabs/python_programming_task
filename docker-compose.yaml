@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8080"
+    networks:
+      - internal    
+      - external
+  upstream:
+    build: ./upstream/
+    ports:
+      - "8000:8080"
+    networks:
+      - internal    
+
+networks:
+  internal:
+    external: false
+  external:
+    external: true
+   
