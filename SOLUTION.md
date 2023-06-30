@@ -201,4 +201,5 @@ I'll go for all bonus points ;)
       which each day is accounted for by exactly 86400 seconds, other
       than that non-integer values can be represented.  See RFC 3339
       [RFC3339] for details regarding date/times in general and UTC in
-      particular.A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z "```
+      particular.A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z "
+```

@@ -83,7 +83,7 @@ force_single_line = true
 
 
 [tool.mypy]
-exclude = ["test_"]
+exclude = ["test_", "upstream/src", "upstream/setup.py"]
 check_untyped_defs = true
 
 [tool.pytest.ini_options]

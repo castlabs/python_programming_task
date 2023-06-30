@@ -1,5 +1,5 @@
 venv_name := .venv
-sources := src tests
+sources := src tests upstream
 
 help:
 	@echo "lint - check style with ruff and mypy"

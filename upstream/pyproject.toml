@@ -1,0 +1,22 @@
+[project]
+name = "upstream"
+authors = [
+ {name = "Jakub Buczyński", email = "jakub@buczynski.net.pl"},
+]
+description = "Part of the solution to recruitment task provided in https://github.com/castlabs/python_programming_task"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+version = "0.0.1"
+dependencies = [
+ "aiohttp==3.8.4",
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
