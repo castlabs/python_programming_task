@@ -31,10 +31,10 @@ install:
 	pip install .
 
 install-dev: 
-	pip install .[dev]
+	pip install -e .[dev]
 
 install-test: 
-	pip install .[test]
+	pip install -e .[test]
 
 clean: 
 	rm -rf $(venv_name)

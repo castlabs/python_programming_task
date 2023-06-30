@@ -1,5 +1,5 @@
 [project]
-name = "aync_http_proxy"
+name = "http_proxy_jwt"
 authors = [
  {name = "Jakub Buczyński", email = "jakub@buczynski.net.pl"},
 ]
